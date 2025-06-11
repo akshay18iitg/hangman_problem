@@ -124,7 +124,7 @@ class HangmanPlayer():
             a = np.array(random.randrange(self.n_actions))
             b = np.zeros((1, 26))
             b[0, a] = 1
-            print(b.shape)
+            # print(b.shape)
             selected_action = torch.from_numpy(b).long()
             # print("ActionSelect: action selected = ", type(random.randrange(self.n_actions)))
             # final_action = torch.zeros(26).scatter(1, selected_action.unsqueeze (1), 1).long()
