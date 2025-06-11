@@ -44,7 +44,7 @@ class HangmanEnv(gym.Env):
 			spaces.MultiDiscrete(np.array([25]*27)),     #Current obscured string
 			spaces.MultiDiscrete(np.array([1]*26))      #Actions used                      #Wordlen
 		))
-		self.observation_space.shape=(27, 26)
+		# self.observation_space.shape=(27, 26)
 		self.seed()
 
 	def filter_and_encode(self, word, vocab_size, min_len, char_to_id):
