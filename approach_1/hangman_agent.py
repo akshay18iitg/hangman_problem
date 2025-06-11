@@ -22,7 +22,7 @@ import torch.nn.functional as F
 
 from memory import Transition, ReplayMemory
 from dqn import DQN
-from log import setup_custom_logger
+# from log import setup_custom_logger
 import time
 # import torchvision.transforms as T
 
@@ -35,9 +35,9 @@ TARGET_UPDATE = 10
 obscured_string_len = 27
 
 # create logger
-logger = setup_custom_logger('root', "./latest.log", "INFO")
-logger.propagate = False
-logger.setLevel(logging.INFO)
+# logger = setup_custom_logger('root', "./latest.log", "INFO")
+# logger.propagate = False
+# logger.setLevel(logging.INFO)
 
 # create console handler and set level to debug
 ch = logging.StreamHandler()
@@ -50,7 +50,7 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 ch.setFormatter(formatter)
 
 # add ch to logger
-logger.addHandler(ch)
+# logger.addHandler(ch)
 
 # set up matplotlib
 is_ipython = 'inline' in matplotlib.get_backend()
@@ -283,7 +283,7 @@ class HangmanPlayer():
         # print(state_action_values.shape)
         loss = criterion(state_action_values, expected_state_action_values.unsqueeze(1)).float()
         # print(expected_state_action_values.requires_grad)
-        logger.info("trainmodel: loss = {0}".format(loss))
+        # logger.info("trainmodel: loss = {0}".format(loss))
         # loss.requires_grad = True
         self.optimizer.zero_grad()
         # loss = Variable(loss, requires_grad = True)
