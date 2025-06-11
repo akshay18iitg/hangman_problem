@@ -14,7 +14,7 @@ config = None
 
 MAX_WORDLEN = 25
 
-with open("config.yaml", 'r') as stream:
+with open("./config.yaml", 'r') as stream:
 	try:
 		config = yaml.safe_load(stream)
 	except yaml.YAMLError as exc:
